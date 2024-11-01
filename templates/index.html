@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+</head>
+<body>
+    <h1>Image Steganography</h1>
+
+    <!-- Form for hiding an image -->
+    <form action="/hide" method="post" enctype="multipart/form-data">
+        <h3>Hide Secret Image:</h3>
+        <label for="cover_image">Select Cover Image:</label>
+        <input type="file" name="cover_image" required><br><br>
+
+        <label for="secret_image">Select Secret Image:</label>
+        <input type="file" name="secret_image" required><br><br>
+
+        <input type="submit" value="Hide Image">
+    </form>
+
+    <hr>
+
+    <!-- Form for extracting an image -->
+    <form action="/extract" method="post" enctype="multipart/form-data">
+        <h3>Extract Secret Image:</h3>
+        <label for="stego_image">Select Stego Image:</label>
+        <input type="file" name="stego_image" required><br><br>
+
+        <label for="width">Enter Secret Image Width:</label>
+        <input type="number" name="width" required><br><br>
+
+        <label for="height">Enter Secret Image Height:</label>
+        <input type="number" name="height" required><br><br>
+
+        <input type="submit" value="Extract Image">
+    </form>
+</body>
+</html>
